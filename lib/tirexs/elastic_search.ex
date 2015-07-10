@@ -101,7 +101,7 @@ defmodule Tirexs.ElasticSearch do
             _  -> { :ok, status, get_body_json(body) }
           end
         end
-      _ -> :error
+      resp -> {:error, resp}
     end
   end
 
